@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace TonerCartridgeApp
+namespace TonerCartridgeApp.Images
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for PasswordEntry.xaml
     /// </summary>
-    public partial class OrderAcceptanceWindow : Window
+    public partial class PasswordEntry : UserControl
     {
-        public OrderAcceptanceWindow()
+        public PasswordEntry()
         {
             InitializeComponent();
         }

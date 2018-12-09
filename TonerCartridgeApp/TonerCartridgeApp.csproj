@@ -34,8 +34,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,9 +63,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Login\PasswordEntry.xaml.cs">
+      <DependentUpon>PasswordEntry.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OrderAcceptanceWindow.xaml.cs">
       <DependentUpon>OrderAcceptanceWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataModel\TonerDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TonerDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\TonerDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TonerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\TonerDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TonerDatabaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\UserInfo.cs">
+      <DependentUpon>TonerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Page Include="Login\PasswordEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,9 +126,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\TonerCartridgeApp.DataModel.TonerCartridgeEntities.datasource" />
+    <None Include="Properties\DataSources\TonerCartridgeApp.DataModel.UserInfo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <EntityDeploy Include="DataModel\TonerDatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TonerDatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataModel\TonerDatabaseModel.edmx.diagram">
+      <DependentUpon>TonerDatabaseModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +149,30 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\iconfinder_No_984759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\016-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\002-padlock-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\006-padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataModel\TonerDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TonerDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>TonerDatabaseModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataModel\TonerDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TonerDatabaseModel.edmx</DependentUpon>
+      <LastGenOutput>TonerDatabaseModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

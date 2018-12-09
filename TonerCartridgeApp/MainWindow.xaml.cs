@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace TonerCartridgeApp
 {
@@ -23,6 +24,20 @@ namespace TonerCartridgeApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TerminateApplication(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            System.Windows.Data.CollectionViewSource userInfoViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("userInfoViewSource")));
+            // Load data by setting the CollectionViewSource.Source property:
+            //userInfoViewSource.Source = [generic data source]
+
         }
     }
 }

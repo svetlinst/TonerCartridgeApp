@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:TonerCartridgeApp"
         mc:Ignorable="d"
         Title="Приемна" Height="450" Width="400">
+    
+    
     <Grid>
         
     </Grid>
