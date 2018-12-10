@@ -9,8 +9,8 @@ namespace TonerCartridgeApp.Model
     public class AppUser
     {
         public string Id { get; set; }
-        public string userName { get; set; }
-        public bool isAdmin { get; set; }
-        public bool isActive { get; set; }
+        public string UserName { get; set; }
+        public bool IsAdmin { get; set; }
+        public bool IsActive { get; set; }
     }
 }

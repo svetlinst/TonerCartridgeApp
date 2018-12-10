@@ -12,9 +12,9 @@ namespace TonerCartridgeApp.UI.Data
         public IEnumerable<AppUser> GetAllAppUsers()
         {
             // TO DO: retrieve the data from the SQL db
-            yield return new AppUser {userName = "Pesho", isActive = true};
-            yield return new AppUser { userName = "Gosho", isActive = true };
-            yield return new AppUser { userName = "Nafarforiy", isActive = false };
+            yield return new AppUser {UserName = "Pesho", IsActive = true};
+            yield return new AppUser { UserName = "Gosho", IsActive = true };
+            yield return new AppUser { UserName = "Nafarforiy", IsActive = false };
         }
     }
 }
