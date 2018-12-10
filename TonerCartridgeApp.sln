@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonerCartridgeApp", "TonerCartridgeApp\TonerCartridgeApp.csproj", "{9F1DFA3D-107B-48D3-85D9-07CAD433BADA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonerCartridgeApp.UI", "TonerCartridgeApp.UI\TonerCartridgeApp.UI.csproj", "{8DAD3465-79A7-4B37-AE3B-58B179EA3FF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonerCartridgeApp.DataAccess", "TonerCartridgeApp.DataAccess\TonerCartridgeApp.DataAccess.csproj", "{82BC9BEA-6E33-40CB-810F-77503F1C169A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonerCartridgeApp.Model", "TonerCartridgeApp.Model\TonerCartridgeApp.Model.csproj", "{E1B54F97-B36C-4DC4-85F5-BD7E85B60BCC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9F1DFA3D-107B-48D3-85D9-07CAD433BADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F1DFA3D-107B-48D3-85D9-07CAD433BADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F1DFA3D-107B-48D3-85D9-07CAD433BADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F1DFA3D-107B-48D3-85D9-07CAD433BADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DAD3465-79A7-4B37-AE3B-58B179EA3FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DAD3465-79A7-4B37-AE3B-58B179EA3FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DAD3465-79A7-4B37-AE3B-58B179EA3FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DAD3465-79A7-4B37-AE3B-58B179EA3FF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82BC9BEA-6E33-40CB-810F-77503F1C169A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82BC9BEA-6E33-40CB-810F-77503F1C169A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82BC9BEA-6E33-40CB-810F-77503F1C169A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82BC9BEA-6E33-40CB-810F-77503F1C169A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B54F97-B36C-4DC4-85F5-BD7E85B60BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B54F97-B36C-4DC4-85F5-BD7E85B60BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B54F97-B36C-4DC4-85F5-BD7E85B60BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B54F97-B36C-4DC4-85F5-BD7E85B60BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
