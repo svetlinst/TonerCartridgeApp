@@ -17,18 +17,47 @@
             <!--Login area-->
             <Grid Height="25" Margin="0 2 0 0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="111*"/>
-                    <ColumnDefinition Width="83*"/>
-                    <ColumnDefinition Width="39*"/>
-                    <ColumnDefinition Width="39*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <ComboBox x:Name="UserSelectionComboBox"
-                          Grid.Column="0" 
-                          Grid.ColumnSpan="2"
+                          Grid.Column="0"
                           ItemsSource="{Binding AppUsers}"
-                          DisplayMemberPath="UserName"/>
-                <Image Source="Images/002-padlock-1.png" Grid.Column="2" RenderOptions.BitmapScalingMode="Fant"/>
-                <Image Source="Images/006-padlock.png" Grid.Column="3" RenderOptions.BitmapScalingMode="Fant"/>
+                          SelectedItem="{Binding SelectedAppUser, Mode=TwoWay}"
+                          DisplayMemberPath="UserName"
+                          DropDownClosed="UserSelectionComboBox_OnDropDownClosed"/>
+                <Button 
+                    Click="LoginButton_OnClick"
+                    Grid.Column="1" 
+                    RenderOptions.BitmapScalingMode="Fant"
+                    Margin="10 0 10 0"
+                    BorderBrush="White"
+                    Background="White"
+                    x:Name="LoginButton">
+
+                    <Image Source="Images/002-padlock-1.png" VerticalAlignment="Center"/>
+                </Button>
+                <Button 
+                    Click="LogOutButton_OnClick"
+                    x:Name="LogOutButton"
+                    Grid.Column="2" 
+                    RenderOptions.BitmapScalingMode="Fant"
+                    Margin="10 0 10 0"
+                    BorderBrush="White"
+                    Background="White">
+                    <Image Source="Images/006-padlock.png"  RenderOptions.BitmapScalingMode="Fant"/>
+                </Button>
+            </Grid>
+
+            <!-- Passord entry form -->
+            <Grid Height="25" Margin="0 2 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="PasswordTextBox" Visibility="Hidden"/>
+
             </Grid>
 
             <!--Title-->
@@ -39,9 +68,11 @@
                    Padding="10"
                    Margin="0 0 0 0"/>
 
-            <TextBlock Text="(username placeholder when logged, else blank)" 
-                       HorizontalAlignment="Center"
-                       Margin="0 0 0 20"/>
+            <TextBlock
+                x:Name="UserInfoLabel"
+                Text="" 
+                HorizontalAlignment="Center"
+                Margin="0 0 0 20"/>
 
             <!--First line of buttons-->
             <Grid Height="25">

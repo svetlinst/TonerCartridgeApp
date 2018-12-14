@@ -6,6 +6,8 @@ namespace TonerCartridgeApp.UI
 {
     public partial class App : Application
     {
+        public bool IsConnected { get; set; }
+
         private void Application_StartUp(object sender, StartupEventArgs e)
         {
             var bootstrapper = new Bootstrapper();

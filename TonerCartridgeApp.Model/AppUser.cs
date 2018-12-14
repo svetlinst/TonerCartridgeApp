@@ -12,5 +12,7 @@ namespace TonerCartridgeApp.Model
         public string UserName { get; set; }
         public bool IsAdmin { get; set; }
         public bool IsActive { get; set; }
+        public int AccessLevel { get; set; }
+        public string Password { get; }
     }
 }

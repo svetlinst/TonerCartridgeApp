@@ -5,6 +5,6 @@ namespace TonerCartridgeApp.UI.Data
 {
     public interface IAppUserDataService
     {
-        IEnumerable<AppUser> GetAllAppUsers();
+        IEnumerable<UserInfo> GetAllAppUsers();
     }
 }

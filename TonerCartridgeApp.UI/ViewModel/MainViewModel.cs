@@ -9,11 +9,11 @@ namespace TonerCartridgeApp.UI.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private IAppUserDataService _appUserDataService;
-        private AppUser _selecAppUser;
+        private UserInfo _selecAppUser;
 
         public MainViewModel(IAppUserDataService appUserDataService)
         {
-            AppUsers = new ObservableCollection<AppUser>();
+            AppUsers = new ObservableCollection<UserInfo>();
             _appUserDataService = appUserDataService;
         }
 
@@ -27,10 +27,10 @@ namespace TonerCartridgeApp.UI.ViewModel
             }
         }
 
-        public ObservableCollection<AppUser> AppUsers { get; set; }
+        public ObservableCollection<UserInfo> AppUsers { get; set; }
 
 
-        public AppUser SelectedAppUser
+        public UserInfo SelectedAppUser
         {
             get { return _selecAppUser;}
             set
